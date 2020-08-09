@@ -1,0 +1,12 @@
+@import './variables/spaces';
+
+.error,
+.no-results {
+  padding: $medium-space;
+  font-size: 20px;
+  text-align: center;
+}
+
+.extra-space {
+  margin-top: 46px;
+}

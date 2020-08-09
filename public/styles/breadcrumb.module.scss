@@ -1,0 +1,32 @@
+@import './variables/colours';
+@import './variables/spaces';
+
+.breadcrumb {
+  padding-top: $small-space;
+  padding-bottom: $small-space;
+
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      color: $gray-3;
+      line-height: 1.4;
+
+      &:not(:first-of-type) {
+        &::before{
+          padding-right: 10px;
+          content: ">";
+        }
+      }
+
+      a {
+        color: $gray-3;
+        text-decoration: none;
+      }
+    }
+  }
+}

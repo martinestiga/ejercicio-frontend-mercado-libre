@@ -1,0 +1,87 @@
+@import './variables/colours';
+@import './variables/font';
+@import './variables/spaces';
+@import './mixins/breakpoints';
+
+.container {
+  display: flex;
+  margin-left: $small-space;
+  margin-right: $small-space;
+  padding-top: $small-space;
+  padding-bottom: $small-space;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-5;
+  }
+
+  &.-skeleton {
+    .price-container {
+      max-width: 80px;
+    }
+  }
+
+  .image {
+    height: 180px;
+    width: 180px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-right: $small-space;
+
+    @include breakpoint("mobile", "exact") {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  .info-container {
+    width: 100%;
+    display: flex;
+    padding: $small-space 0;
+
+    @include breakpoint("mobile", "exact") {
+      flex-direction: column;
+    }
+
+    .info {
+      width: 100%;
+    }
+
+    .price-container {
+      margin-bottom: $medium-space;
+
+      .price {
+        font-size: 24px;
+
+        .price-symbol {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: $light;
+      line-height: 1.2;
+      margin: 0;
+
+      a {
+        color: $gray-1;
+        text-decoration: none;
+      }
+    }
+
+    .free-shipping-icon {
+      margin-left: 10px;
+    }
+
+    .address {
+      width: 210px;
+      margin-top: $small-space;
+      font-size: 12px;
+
+      @include breakpoint("mobile", "exact") {
+        width: 100%;
+      }
+    }
+  }
+}

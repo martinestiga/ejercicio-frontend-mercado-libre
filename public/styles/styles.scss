@@ -1,0 +1,75 @@
+@import './mixins/breakpoints';
+@import './variables/colours';
+@import './variables/font';
+
+@font-face {
+	font-family: 'Proxima Nova';
+	font-weight: $light;
+	font-style: normal;
+	font-display: swap;
+	src: url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-300.eot');
+	src: url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-300.eot?#iefix') format('embedded-opentype'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-300.woff2') format('woff2'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-300.woff') format('woff'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-300.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	font-weight: $regular;
+	font-style: normal;
+	font-display: swap;
+	src: url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-400.eot');
+	src: url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-400.eot?#iefix') format('embedded-opentype'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-400.woff2') format('woff2'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-400.woff') format('woff'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-400.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	font-weight: $semi-bold;
+	font-style: normal;
+	font-display: swap;
+	src: url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-600.eot');
+	src: url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-600.eot?#iefix') format('embedded-opentype'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-600.woff2') format('woff2'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-600.woff') format('woff'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-600.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	font-weight: $bold;
+	font-style: normal;
+	font-display: swap;
+	src: url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-700.eot');
+	src: url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-700.eot?#iefix') format('embedded-opentype'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-700.woff2') format('woff2'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-700.woff') format('woff'),
+		url('https://http2.mlstatic.com/ui/webfonts/v4.0.0/proxima-nova/proxima-nova-700.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  background-color: $gray-5;
+  font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: $regular;
+  color: $gray-1;
+  padding-bottom: 50px;
+}
+
+.container {
+	box-sizing: content-box;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 0 24px;
+
+	@include breakpoint("mobile", "exact") {
+		padding: 0 16px;
+	}
+}

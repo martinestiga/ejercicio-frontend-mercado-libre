@@ -1,0 +1,59 @@
+@import '../variables/breakpoints';
+
+@mixin breakpoint($size, $exact: "exact"){
+	@if $size == "mobile"{
+		@if $exact == "exact"{
+			@media(min-width: $mobile-min-size) and (max-width: $mobile-max-size){
+				@content;
+			}
+		}@if $exact == "up"{
+			@media(min-width: $mobile-min-size){
+				@content;
+			}
+		}
+	}
+
+	@else if $size == "tablet"{
+		@if $exact == "exact"{
+			@media(min-width: $tablet-min-size) and (max-width: $tablet-max-size){
+				@content;
+			}
+		}@if $exact == "up"{
+			@media(min-width: $tablet-min-size){
+				@content;
+			}
+		}@if $exact == "down"{
+			@media(max-width: $tablet-max-size){
+				@content;
+			}
+		}
+	}
+
+	@else if $size == "desktop"{
+		@if $exact == "exact"{
+			@media(min-width: $desktop-min-size) and (max-width: $desktop-max-size){
+				@content;
+			}
+		}@if $exact == "up"{
+			@media(min-width: $desktop-min-size){
+				@content;
+			}
+		}@if $exact == "down"{
+			@media(max-width: $desktop-max-size){
+				@content;
+			}
+		}
+	}
+
+	@else if $size == "huge"{
+		@media(min-width: $desktop-huge-size){
+			@content;
+		}
+	}
+}
+
+@mixin breakpoint-manual($break-min, $break-max){
+	@media(min-width: $break-min) and (max-width: $break-max){
+		@content;
+	}
+}
